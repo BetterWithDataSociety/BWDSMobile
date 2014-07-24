@@ -22,6 +22,8 @@ cd MobileCitizen
 ### WIP
 
 
+https://build.phonegap.com/apps/1020957/builds
+
 
 https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 
