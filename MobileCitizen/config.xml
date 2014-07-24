@@ -7,8 +7,7 @@
     <author email="ianibbo@gmail.com" href="http://apps.opensheffield.org">
         The Better With Data Society
     </author>
-    <!-- content src="index.html"-->
-    <content src="myService.html"/>
+    <content src="index.html"/>
 
     <access origin="*" />
 
