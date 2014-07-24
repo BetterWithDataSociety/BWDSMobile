@@ -26,5 +26,7 @@ https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 ### Currently experimenting with background modes
 
 cordova plugin add de.appplant.cordova.plugin.background-mode
+cordova platform add ios
+cordova platform add android
 https://github.com/Red-Folder/bgs-core/wiki
 cordova plugin add https://github.com/Red-Folder/bgs-sample.git
