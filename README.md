@@ -21,6 +21,8 @@ cd MobileCitizen
 
 ### WIP
 
+Building at https://build.phonegap.com/apps/1020638/builds
+
 https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 
 ### Currently experimenting with background modes
