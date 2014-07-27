@@ -47,8 +47,8 @@ https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 cordova plugin add de.appplant.cordova.plugin.background-mode
 cordova platform add ios
 cordova platform add android
-
-
+cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+cordova plugin add org.apache.cordova.console
 investgating :: https://github.com/Red-Folder/bgs-core/wiki
 investgating :: https://github.com/Red-Folder/bgs-sample.git
 
@@ -56,3 +56,7 @@ investgating :: https://github.com/Red-Folder/bgs-sample.git
 To Run locally::
 
 cordova run
+
+cordova run --debug --emulator
+
+adb logcat

@@ -26,6 +26,9 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        console.log('bindEvents....');
+        $('#lastLoc').empty();
+        $('#lastLoc').append('<tr><td>waiting-1...</td><td></td></tr>');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -33,6 +36,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        console.log('onDeviceReady');
+        $('#lastLoc').empty();
+        $('#lastLoc').append('<tr><td>waiting...</td><td></td></tr>');
         // app.receivedEvent('deviceready');
         window.plugin.backgroundMode.enable();
         // Watch location, calling onWatchCurrentPositionSuccess or onWatchCurrentPositionError accordingly
@@ -47,7 +53,7 @@ var app = {
         // var receivedElement = parentElement.querySelector('.received');
         // listeningElement.setAttribute('style', 'display:none;');
         // receivedElement.setAttribute('style', 'display:block;');
-        // console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);
     },
     onWatchCurrentPositionError: function() {
     },
@@ -58,19 +64,23 @@ var app = {
     updatePosition: function () {
 	//<!-- update your HTML here , check for valid lat,lon (i.e. they should be different than -999) -->
 	//<!-- call this function again -->
-        ctr++
-        console.log('Processing '+app.position+' '+ctr);
-        // app.locationQueue.push(app.position);
-        app.lastFive.push(app.position);
-        if(app.lastFive.length > 5) {
-          app.lastFive.splice(5, 1);
-        } 
-        var lastLocElement = document.getElementById('lastLoc');
-        lastLoc.empty();
-        for(e : app.lastFive) {
-          lastLoc.append('<tr><td>'+e.timestamp+'</td><td>'+e.position.location+'</td></tr>');
+    
+        try {
+          app.ctr++
+          console.log('Processing '+app.position+' '+ctr);
+          // app.locationQueue.push(app.position);
+          app.lastFive.push(app.position);
+          if(app.lastFive.length > 5) {
+            app.lastFive.splice(5, 1);
+          } 
+          $('#lastLoc').empty();
+          for(var e in app.lastFive) {
+            $('#lastLoc').append('<tr><td>'+e.timestamp+'</td><td>'+e.position.location+'</td></tr>');
+          }
         }
-	setTimeout(app.updatePosition , 5000);
+        finally {
+    	  setTimeout(app.updatePosition , 5000);
+        }
     },
     position:-1,
     locationQueue:[],
