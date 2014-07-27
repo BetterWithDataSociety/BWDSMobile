@@ -6,12 +6,21 @@ module.exports = [
         "clobbers": [
             "window.plugins.BackgroundServices"
         ]
+    },
+    {
+        "file": "plugins/org.transistorsoft.cordova.background-geolocation/www/BackgroundGeoLocation.js",
+        "id": "org.transistorsoft.cordova.background-geolocation.BackgroundGeoLocation",
+        "clobbers": [
+            "plugins.backgroundGeoLocation"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.red_folder.phonegap.plugin.backgroundservice": "3.3"
+    "com.red_folder.phonegap.plugin.backgroundservice": "3.3",
+    "org.transistorsoft.cordova.background-geolocation": "0.3.0",
+    "org.apache.cordova.geolocation": "0.3.8"
 }
 // BOTTOM OF METADATA
 });
