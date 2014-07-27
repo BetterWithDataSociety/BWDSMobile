@@ -32,9 +32,11 @@ npm install -g phonegap
 
 ### as user
 
-# Old:: cordova create MobileCitizen org.opensheffield.MobileCitizen
+-- Old:: cordova create MobileCitizen org.opensheffield.MobileCitizen
 phonegap create MobileCitizen org.opensheffield.MobileCitizen
 cd MobileCitizen
+
+android avd -- To create/manage virtual devices
 
 
 ### WIP
@@ -47,11 +49,11 @@ https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 
 ### Currently experimenting with background modes
 
-cordova plugin add de.appplant.cordova.plugin.background-mode
-cordova platform add ios
-cordova platform add android
-https://github.com/Red-Folder/bgs-core/wiki
-cordova plugin add https://github.com/Red-Folder/bgs-sample.git
+-- Old :: cordova plugin add de.appplant.cordova.plugin.background-mode
+-- Old :: cordova platform add ios
+-- Old :: cordova platform add android
+-- Old :: https://github.com/Red-Folder/bgs-core/wiki
+-- Old :: cordova plugin add https://github.com/Red-Folder/bgs-sample.git
 
 
 To Run locally::
