@@ -50,3 +50,8 @@ cordova platform add ios
 cordova platform add android
 https://github.com/Red-Folder/bgs-core/wiki
 cordova plugin add https://github.com/Red-Folder/bgs-sample.git
+
+
+To Run locally::
+
+cordova run
