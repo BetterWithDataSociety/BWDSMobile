@@ -27,17 +27,12 @@ Apache Cordova app, initially created with
 
 apt-get install npm
 ln -s /usr/bin/nodejs /usr/bin/node
-# - Used to do - npm install -g cordova - switched to
-npm install -g phonegap
+npm install -g cordova - switched to
 
 ### as user
 
--- Old:: cordova create MobileCitizen org.opensheffield.MobileCitizen
-phonegap create MobileCitizen org.opensheffield.MobileCitizen
+cordova create MobileCitizen org.opensheffield.MobileCitizen
 cd MobileCitizen
-
-android avd -- To create/manage virtual devices
-
 
 ### WIP
 
@@ -49,11 +44,13 @@ https://github.com/Red-Folder/bgs-core/wiki/Using-the-MyService-Sample
 
 ### Currently experimenting with background modes
 
--- Old :: cordova plugin add de.appplant.cordova.plugin.background-mode
--- Old :: cordova platform add ios
--- Old :: cordova platform add android
--- Old :: https://github.com/Red-Folder/bgs-core/wiki
--- Old :: cordova plugin add https://github.com/Red-Folder/bgs-sample.git
+cordova plugin add de.appplant.cordova.plugin.background-mode
+cordova platform add ios
+cordova platform add android
+
+
+investgating :: https://github.com/Red-Folder/bgs-core/wiki
+investgating :: https://github.com/Red-Folder/bgs-sample.git
 
 
 To Run locally::
