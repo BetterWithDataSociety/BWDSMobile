@@ -27,11 +27,13 @@ Apache Cordova app, initially created with
 
 apt-get install npm
 ln -s /usr/bin/nodejs /usr/bin/node
-npm install -g cordova
+# - Used to do - npm install -g cordova - switched to
+npm install -g phonegap
 
 ### as user
 
-cordova create MobileCitizen org.opensheffield.MobileCitizen
+# Old:: cordova create MobileCitizen org.opensheffield.MobileCitizen
+phonegap create MobileCitizen org.opensheffield.MobileCitizen
 cd MobileCitizen
 
 
