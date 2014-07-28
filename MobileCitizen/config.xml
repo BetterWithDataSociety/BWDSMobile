@@ -16,6 +16,7 @@
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
 
     <preference name="permissions" value="none"/>
+    <preference name="phonegap-version" value="3.5.0" />
 
     <!-- to enable individual permissions use the following examples -->
     <!--
