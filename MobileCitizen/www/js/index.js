@@ -42,7 +42,7 @@ var app = {
         // app.receivedEvent('deviceready');
         window.plugin.backgroundMode.enable();
         // Watch location, calling onWatchCurrentPositionSuccess or onWatchCurrentPositionError accordingly
-	navigator.geolocation.watchCurrentPosition(app.onWatchCurrentPositionSuccess, app.onWatchCurrentPositionError);
+	navigator.geolocation.watchPosition(app.onWatchCurrentPositionSuccess, app.onWatchCurrentPositionError);
         // Queue up an event to update position every 5000s
 	setTimeout(app.updatePosition , 5000);
     },
@@ -67,7 +67,7 @@ var app = {
     
         try {
           app.ctr++
-          console.log('Processing '+app.position+' '+ctr);
+          console.log('Processing '+app.position+' '+app.ctr);
           // app.locationQueue.push(app.position);
           app.lastFive.push(app.position);
           if(app.lastFive.length > 5) {
@@ -75,7 +75,7 @@ var app = {
           } 
           $('#lastLoc').empty();
           for(var e in app.lastFive) {
-            $('#lastLoc').append('<tr><td>'+e.timestamp+'</td><td>'+e.position.location+'</td></tr>');
+            $('#lastLoc').append('<tr><td>'+e.timestamp+'</td><td>'+e.location+'</td></tr>');
           }
         }
         finally {

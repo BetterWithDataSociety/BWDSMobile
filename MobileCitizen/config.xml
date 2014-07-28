@@ -14,6 +14,8 @@
     <access origin="*" />
 
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
+    <gap:plugin name="org.apache.cordova.geolocation"/>
+
 
     <preference name="permissions" value="none"/>
     <preference name="phonegap-version" value="3.5.0" />

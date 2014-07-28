@@ -49,6 +49,8 @@ cordova platform add ios
 cordova platform add android
 cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 cordova plugin add org.apache.cordova.console
+cordova plugin add org.apache.cordova.geolocation 
+// cordova plugin add org.apache.cordova.GeoBroker
 investgating :: https://github.com/Red-Folder/bgs-core/wiki
 investgating :: https://github.com/Red-Folder/bgs-sample.git
 
