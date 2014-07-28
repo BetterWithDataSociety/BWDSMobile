@@ -76,7 +76,7 @@ var app = {
             app.lastFive.splice(5, 1);
           } 
           $('#lastLoc').empty();
-          for(var e in app.lastFive) {
+          for(var e = 0; e<app.lastFive.length; e++) {
             var l = app.lastFive[e]
             $('#lastLoc').append('<tr><td>'+l.timestamp+'['+app.ctr+']</td><td>'+l.coords.latitude+':'+l.coords.longitide+':'+l.coords.altitude+'</td></tr>');
           }
