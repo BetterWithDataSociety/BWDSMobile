@@ -72,14 +72,14 @@ var app = {
           app.ctr++
           console.log('Processing '+app.position+' '+app.ctr);
           // app.locationQueue.push(app.position);
-          app.lastFive.push(app.position);
           if(app.lastFive.length > 5) {
-            app.lastFive.splice(5, 1);
+            app.lastFive.splice(0, 1);
           } 
+          app.lastFive.push(app.position);
           $('#lastLoc').empty();
           for(var e = 0; e<app.lastFive.length; e++) {
             var l = app.lastFive[e]
-            $('#lastLoc').append('<tr><td>ts:'+l.timestamp+'['+e+']['+app.ctr+']</td><td>'+l.coords.latitude+':'+l.coords.longitide+':'+l.coords.altitude+'</td></tr>');
+            $('#lastLoc').append('<tr><td>ts:'+l.timestamp+'['+e+']['+app.ctr+']</td><td>lat:'+l.coords.latitude+' lon:'+l.coords.longitude+' alt:'+l.coords.altitude+'</td></tr>');
           }
         }
         finally {
