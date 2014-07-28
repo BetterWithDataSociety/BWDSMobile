@@ -79,7 +79,7 @@ var app = {
           $('#lastLoc').empty();
           for(var e = 0; e<app.lastFive.length; e++) {
             var l = app.lastFive[e]
-            $('#lastLoc').append('<tr><td>ts:'+l.timestamp+'['+e+']['+app.ctr+']</td><td>lat:'+l.coords.latitude+' lon:'+l.coords.longitude+' alt:'+l.coords.altitude+'</td></tr>');
+            $('#lastLoc').append('<tr><td>ts:'+l.timestamp+'['+e+']['+app.ctr+']</td><td>lat:'+l.coords.latitude+' lon:'+l.coords.longitude+' alt:'+l.coords.altitude+' heading: '+l.coords.heading+' speed:'+l.coords.speed+'</td></tr>');
           }
         }
         finally {
