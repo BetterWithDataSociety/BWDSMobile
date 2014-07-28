@@ -42,6 +42,7 @@ var app = {
         // app.receivedEvent('deviceready');
         window.plugin.backgroundMode.enable();
         // Watch location, calling onWatchCurrentPositionSuccess or onWatchCurrentPositionError accordingly
+	navigator.geolocation.getCurrentPosition(app.onWatchCurrentPositionSuccess, app.onWatchCurrentPositionError);
 	navigator.geolocation.watchPosition(app.onWatchCurrentPositionSuccess, app.onWatchCurrentPositionError);
         // Queue up an event to update position every 5000s
 	setTimeout(app.updatePosition , 5000);
@@ -58,6 +59,7 @@ var app = {
     onWatchCurrentPositionError: function() {
     },
     onWatchCurrentPositionSuccess: function(position) {
+        console.log('Update app position');
 	app.position = position;
 	//<-- don't do anything intensive here , especially HTML updates, your display may hang with too much to do -->
     },
@@ -75,7 +77,7 @@ var app = {
           } 
           $('#lastLoc').empty();
           for(var e in app.lastFive) {
-            $('#lastLoc').append('<tr><td>'+e.timestamp+'</td><td>'+e.location+'</td></tr>');
+            $('#lastLoc').append('<tr><td>'+e.timestamp+'['+app.ctr+']</td><td>'+e.coords+'</td></tr>');
           }
         }
         finally {
